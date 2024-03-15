@@ -1,17 +1,14 @@
 import styled from "styled-components";
-import Dice1 from "/dice/dice_1.png";
-import Dice2 from "/dice/dice_2.png";
-import Dice3 from "/dice/dice_3.png";
-import Dice4 from "/dice/dice_4.png";
-import Dice5 from "/dice/dice_5.png";
-import Dice6 from "/dice/dice_6.png";
 
-const RollDice = () => {
+const RollDice = ({roleDice,selectedDiceIcon}) => {
+  
+
+  
   return (
     <DiceContainer>
 
-      <div>
-        <img src={Dice1} alt="dice1" />
+      <div className="dice" onClick={roleDice}>
+        <img src={selectedDiceIcon} alt="dice1" />
       </div>
       <p>Click on Dice to roll</p>
     </DiceContainer>
@@ -27,4 +24,12 @@ const DiceContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+
+  .dice{
+    cursor: pointer;
+  }
+
+  p{
+    font: 24px;
+  }
 `;
