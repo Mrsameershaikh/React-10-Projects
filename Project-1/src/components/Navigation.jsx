@@ -1,7 +1,6 @@
 import React from 'react';
 import Logo from '../../public/images/brand_logo.png';
 import './Navigation.css';
-
 const Navigation = () => {
   return (
     <nav className='header-container'>
